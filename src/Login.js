@@ -20,6 +20,9 @@ const Login = ({isLogin, setIsLogin}) => {
       <label for="password">Password</label>
       <input type="password" name="password" id="password" value={password} required onChange={(e)=>setPassword(e.target.value)}/>
       <span>Forgot Password</span>
+      {error && <div style={{textAlign: 'center',
+    fontWeight: 'bold',
+    color: 'red'}}> Invalid Creds</div>}
       <button onClick={handleLogin}>Login</button>
     </div>
   </div>
